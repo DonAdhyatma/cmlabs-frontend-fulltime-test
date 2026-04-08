@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect, use } from 'react';
-import { getMealsByIngredient } from '@/lib/api';
+import { getMealsByArea } from '@/lib/api';
 import MealList from '@/components/molecules/MealList';
 import SearchBar from '@/components/atoms/SearchBar';
 import Link from 'next/link';
 
-export default function IngredientDetailPage({ params }) {
-  const { ingredient } = use(params);
+export default function LocalCulinaryDetailPage({ params }) {
+  const { area } = use(params);
   const [meals, setMeals] = useState([]);
   const [search, setSearch] = useState('');
   const [filtered, setFiltered] = useState([]);
@@ -17,19 +17,18 @@ export default function IngredientDetailPage({ params }) {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    getMealsByIngredient(ingredient)
+    getMealsByArea(area)
       .then((data) => {
         setMeals(data || []);
         setFiltered(data || []);
       })
-      .catch((err) => {
-        console.log('Error:', err);
+      .catch(() => {
         setError('Failed to load meals. Please try again.');
       })
       .finally(() => {
         setLoading(false);
       });
-  }, [ingredient]);
+  }, [area]);
 
   useEffect(() => {
     const mealArray = Array.isArray(meals) ? meals : [];
@@ -42,22 +41,22 @@ export default function IngredientDetailPage({ params }) {
   return (
     <div>
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6 flex-wrap">
         <Link href="/" className="hover:text-gray-600 transition">
           Home
         </Link>
         <span>›</span>
-        <Link href="/ingredients" className="hover:text-gray-600 transition">
-          Ingredients
+        <Link href="/local-culinary" className="hover:text-gray-600 transition">
+          Local Culinary
         </Link>
         <span>›</span>
-        <span className="text-gray-600 capitalize">{ingredient}</span>
+        <span className="text-gray-600">{area}</span>
       </nav>
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 capitalize">
-          {ingredient} Meals
+        <h1 className="text-4xl font-bold text-gray-800">
+          {area} Cuisine
         </h1>
         <SearchBar
           value={search}

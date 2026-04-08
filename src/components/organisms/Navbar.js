@@ -21,13 +21,13 @@ export default function Navbar() {
             <Link href="/" className="hover:text-gray-900 transition">Home</Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-gray-900 transition">Foods</Link>
+            <Link href="/foods" className="hover:text-gray-900 transition">Foods</Link>
           </li>
           <li>
             <Link href="/ingredients" className="hover:text-gray-900 transition">Ingredients</Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-gray-900 transition">Local Culinary</Link>
+            <Link href="/local-culinary" className="hover:text-gray-900 transition">Local Culinary</Link>
           </li>
         </ul>
 
@@ -49,13 +49,13 @@ export default function Navbar() {
             <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Home</Link>
           </li>
           <li>
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Foods</Link>
+            <Link href="/foods" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Foods</Link>
           </li>
           <li>
             <Link href="/ingredients" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Ingredients</Link>
           </li>
           <li>
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Local Culinary</Link>
+            <Link href="/local-culinary" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Local Culinary</Link>
           </li>
         </ul>
       )}
