@@ -24,8 +24,6 @@ A meal discovery web application built with Next.js, consuming TheMealDB API
 ```
 src/
 ├── app/
-│   ├── page.js                         # Home page
-│   ├── layout.js                       # Root layout
 │   ├── foods/
 │   │   └── page.js                     # Foods page
 │   ├── ingredients/
@@ -39,6 +37,9 @@ src/
 │   └── meals/
 │       └── [id]/
 │           └── page.js                 # Meal detail page
+│   ├── globals.css                     # Global styles & Tailwind imports
+│   ├── layout.js                       # Root layout
+│   ├── page.js                         # Home page
 ├── components/
 │   ├── atoms/
 │   │   ├── IngredientCard.js
