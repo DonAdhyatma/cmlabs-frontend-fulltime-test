@@ -1,6 +1,6 @@
 # CMLABS Frontend Fulltime Test
 
-A meal discovery web application built with Next.js, consuming TheMealDB API.
+A meal discovery web application built with Next.js, consuming TheMealDB API
 
 ## 🚀 Tech Stack
 
@@ -121,7 +121,7 @@ This project uses [TheMealDB API](https://www.themealdb.com/api.php):
 
 ## 🚀 Live Demo
 
-[https://cmlabs-frontend-fulltime-test-eight.vercel.app/]
+https://cmlabs-frontend-fulltime-test-eight.vercel.app/
 
 ## Test Participant
 
