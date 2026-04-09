@@ -21,6 +21,7 @@ A meal discovery web application built with Next.js, consuming TheMealDB API
 
 ## 📁 Project Structure
 
+```
 src/
 ├── app/
 │   ├── page.js                         # Home page
@@ -50,6 +51,7 @@ src/
 │       └── Navbar.js
 └── lib/
 └── api.js                          # API functions
+```
 
 ## 🛠️ Getting Started
 
@@ -99,7 +101,7 @@ npm run start
 This project uses [TheMealDB API](https://www.themealdb.com/api.php):
 
 | Endpoint | Description |
-
+|---|---|
 | `/list.php?i=list` | List all ingredients |
 | `/filter.php?i={ingredient}` | Filter meals by ingredient |
 | `/lookup.php?i={id}` | Get meal detail by ID |
@@ -110,7 +112,7 @@ This project uses [TheMealDB API](https://www.themealdb.com/api.php):
 ## 📱 Pages
 
 | Page | Route | Description |
-
+|---|---|---|
 | Home | `/` | Food categories overview |
 | Foods | `/foods` | Browse all food categories |
 | Ingredients | `/ingredients` | Browse all ingredients |
