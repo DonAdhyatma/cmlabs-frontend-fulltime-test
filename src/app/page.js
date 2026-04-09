@@ -14,8 +14,8 @@ export default async function HomePage() {
           <span>🍔</span>
           <span>🍕</span>
         </div>
-        <p className="text-sm text-gray-800 mb-3">mealapp API website</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+        <p className="text-md font-bold text-gray-800 mt-5 mb-5">mealapp API website</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-5">
           See All The Delicious Foods
         </h1>
       </div>

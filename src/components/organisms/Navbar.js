@@ -11,23 +11,23 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-2 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-gray-800">
+        <Link href="/" className="text-2xl font-bold text-gray-800">
           mealapp
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-sm text-gray-600">
+        <ul className="hidden md:flex gap-8 text-base text-gray-600">
           <li>
-            <Link href="/" className="hover:text-gray-900 transition">Home</Link>
+            <Link href="/" className="hover:text-black transition">Home</Link>
           </li>
           <li>
-            <Link href="/foods" className="hover:text-gray-900 transition">Foods</Link>
+            <Link href="/foods" className="hover:text-black transition">Foods</Link>
           </li>
           <li>
-            <Link href="/ingredients" className="hover:text-gray-900 transition">Ingredients</Link>
+            <Link href="/ingredients" className="hover:text-black transition">Ingredients</Link>
           </li>
           <li>
-            <Link href="/local-culinary" className="hover:text-gray-900 transition">Local Culinary</Link>
+            <Link href="/local-culinary" className="hover:text-black transition">Local Culinary</Link>
           </li>
         </ul>
 
@@ -44,18 +44,18 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden px-4 pb-4 flex flex-col gap-3 text-sm text-gray-600">
+        <ul className="md:hidden px-4 pb-4 flex flex-col items-center gap-3 text-base text-gray-600 mt-3">
           <li>
-            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Home</Link>
+            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-black transition">Home</Link>
           </li>
           <li>
-            <Link href="/foods" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Foods</Link>
+            <Link href="/foods" onClick={() => setIsOpen(false)} className="hover:text-black transition">Foods</Link>
           </li>
           <li>
-            <Link href="/ingredients" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Ingredients</Link>
+            <Link href="/ingredients" onClick={() => setIsOpen(false)} className="hover:text-black transition">Ingredients</Link>
           </li>
           <li>
-            <Link href="/local-culinary" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">Local Culinary</Link>
+            <Link href="/local-culinary" onClick={() => setIsOpen(false)} className="hover:text-black transition">Local Culinary</Link>
           </li>
         </ul>
       )}

@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CMLABS Frontend Fulltime Test
 
-## Getting Started
+A meal discovery web application built with Next.js, consuming TheMealDB API.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16.2.2 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Language**: JavaScript
+- **Deployment**: Vercel
+
+## ✨ Features
+
+- Browse food categories on Home page
+- Browse all ingredients with search functionality
+- Browse meals by ingredient with search functionality
+- Browse local culinary by area/cuisine
+- View detailed meal information including instructions, recipes, and tutorial video
+- Fully responsive on desktop, tablet, and mobile
+- Atomic component architecture (Atoms, Molecules, Organisms)
+
+## 📁 Project Structure
+
+src/
+├── app/
+│   ├── page.js                         # Home page
+│   ├── layout.js                       # Root layout
+│   ├── foods/
+│   │   └── page.js                     # Foods page
+│   ├── ingredients/
+│   │   ├── page.js                     # Ingredients page
+│   │   └── [ingredient]/
+│   │       └── page.js                 # Ingredient detail page
+│   ├── local-culinary/
+│   │   ├── page.js                     # Local Culinary page
+│   │   └── [area]/
+│   │       └── page.js                 # Area detail page
+│   └── meals/
+│       └── [id]/
+│           └── page.js                 # Meal detail page
+├── components/
+│   ├── atoms/
+│   │   ├── IngredientCard.js
+│   │   ├── MealCard.js
+│   │   └── SearchBar.js
+│   ├── molecules/
+│   │   ├── IngredientList.js
+│   │   └── MealList.js
+│   └── organisms/
+│       └── Navbar.js
+└── lib/
+└── api.js                          # API functions
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+- Node.js >= 20.9
+- npm >= 10
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/dannirachman/cmlabs-frontend-fulltime-test.git
+```
+
+2. Navigate to project directory
+
+```bash
+cd cmlabs-frontend-fulltime-test
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 🌐 API Reference
 
-To learn more about Next.js, take a look at the following resources:
+This project uses [TheMealDB API](https://www.themealdb.com/api.php):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Endpoint | Description |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| `/list.php?i=list` | List all ingredients |
+| `/filter.php?i={ingredient}` | Filter meals by ingredient |
+| `/lookup.php?i={id}` | Get meal detail by ID |
+| `/categories.php` | List all categories |
+| `/list.php?a=list` | List all areas/cuisines |
+| `/filter.php?a={area}` | Filter meals by area |
 
-## Deploy on Vercel
+## 📱 Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Page | Route | Description |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Home | `/` | Food categories overview |
+| Foods | `/foods` | Browse all food categories |
+| Ingredients | `/ingredients` | Browse all ingredients |
+| Ingredient Detail | `/ingredients/[ingredient]` | Meals by ingredient |
+| Local Culinary | `/local-culinary` | Browse by cuisine area |
+| Area Detail | `/local-culinary/[area]` | Meals by area |
+| Meal Detail | `/meals/[id]` | Full meal information |
+
+## 🚀 Live Demo
+
+[https://cmlabs-frontend-fulltime-test-eight.vercel.app/]
+
+## Test Participant
+
+**Danni Adhyatma Rachman**
